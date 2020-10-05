@@ -18,13 +18,7 @@
 			var txtlink = $('#txtlink');
 			var cmdgo = $('#cmdgo');
 			txtlink.val('').focus();
-			txtlink.on('focus', function() {/*$(this).select();*/
-				setTimeout(async () => {
-					const text = await navigator.clipboard.readText();
-					$(this).empty().val(text).select();
-				}, 10);
-
-			});
+			txtlink.on('focus', function() {$(this).select();});
 			txtlink.on('mouseup', function(e) {e.preventDefault();return false;});
 			cmdgo.on('click', function(e) {
 				e.preventDefault();
